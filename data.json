@@ -1,0 +1,383 @@
+{
+  "createTypes": {
+    "volume": "http://localhost:30404/v1/volumes"
+  },
+  "data": [
+    {
+      "accessMode": "rwo",
+      "backendStoreDriver": "v1",
+      "backingImage": "",
+      "backupCompressionMethod": "lz4",
+      "backupStatus": [
+        {
+          "backupURL": "",
+          "error": "could not find snapshot 'Demain' to backup, engine 'pvc-6745c810-736f-4027-af07-ac701e919fee-e-0'",
+          "progress": 0,
+          "replica": "",
+          "size": "",
+          "snapshot": "",
+          "state": "Error"
+        },
+        {
+          "backupURL": "s3://oci-backup-dev@us-east-1/?backup=backup-0f3d06da69174e45&volume=pvc-6745c810-736f-4027-af07-ac701e919fee",
+          "error": "",
+          "progress": 100,
+          "replica": "pvc-6745c810-736f-4027-af07-ac701e919fee-r-9cb0fd2b",
+          "size": "65011712",
+          "snapshot": "snapshot1-python2",
+          "state": "Completed"
+        }
+      ],
+      "cloneStatus": {
+        "snapshot": "",
+        "sourceVolume": "",
+        "state": ""
+      },
+      "conditions": {
+        "Restore": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T13:51:29Z",
+          "message": "",
+          "reason": "",
+          "status": "false"
+        },
+        "Scheduled": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T13:51:51Z",
+          "message": "",
+          "reason": "",
+          "status": "true"
+        },
+        "TooManySnapshots": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T13:51:29Z",
+          "message": "",
+          "reason": "",
+          "status": "false"
+        },
+        "WaitForBackingImage": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T13:51:29Z",
+          "message": "",
+          "reason": "",
+          "status": "false"
+        }
+      },
+      "controllers": [
+        {
+          "actualSize": "51027968",
+          "address": "10.42.0.20",
+          "currentImage": "longhornio/longhorn-engine:v1.5.3",
+          "endpoint": "/dev/longhorn/pvc-6745c810-736f-4027-af07-ac701e919fee",
+          "engineImage": "longhornio/longhorn-engine:v1.5.3",
+          "hostId": "rke2",
+          "instanceManagerName": "instance-manager-d6dcb04124ed15b9c5d678559ed339d8",
+          "isExpanding": false,
+          "lastExpansionError": "",
+          "lastExpansionFailedAt": "",
+          "lastRestoredBackup": "",
+          "name": "pvc-6745c810-736f-4027-af07-ac701e919fee-e-0",
+          "requestedBackupRestore": "",
+          "running": true,
+          "size": "1073741824",
+          "unmapMarkSnapChainRemovedEnabled": false
+        }
+      ],
+      "created": "2023-11-21 13:51:28 +0000 UTC",
+      "currentImage": "longhornio/longhorn-engine:v1.5.3",
+      "dataLocality": "disabled",
+      "dataSource": "",
+      "disableFrontend": false,
+      "diskSelector": [],
+      "encrypted": false,
+      "engineImage": "longhornio/longhorn-engine:v1.5.3",
+      "fromBackup": "",
+      "frontend": "blockdev",
+      "kubernetesStatus": {
+        "lastPVCRefAt": "",
+        "lastPodRefAt": "",
+        "namespace": "default",
+        "pvName": "pvc-6745c810-736f-4027-af07-ac701e919fee",
+        "pvStatus": "Bound",
+        "pvcName": "nginx-data-nginx-statefulset-0",
+        "workloadsStatus": [
+          {
+            "podName": "nginx-statefulset-0",
+            "podStatus": "Running",
+            "workloadName": "nginx-statefulset",
+            "workloadType": "StatefulSet"
+          }
+        ]
+      },
+      "lastAttachedBy": "",
+      "lastBackup": "backup-0f3d06da69174e45",
+      "lastBackupAt": "2023-11-22T00:20:48Z",
+      "migratable": false,
+      "name": "pvc-6745c810-736f-4027-af07-ac701e919fee",
+      "nodeSelector": [],
+      "numberOfReplicas": 1,
+      "offlineReplicaRebuilding": "disabled",
+      "offlineReplicaRebuildingRequired": false,
+      "purgeStatus": [
+        {
+          "error": "",
+          "isPurging": false,
+          "progress": 0,
+          "replica": "pvc-6745c810-736f-4027-af07-ac701e919fee-r-9cb0fd2b",
+          "state": ""
+        }
+      ],
+      "ready": true,
+      "rebuildStatus": [],
+      "recurringJobSelector": null,
+      "replicaAutoBalance": "ignored",
+      "replicaSoftAntiAffinity": "ignored",
+      "replicaZoneSoftAntiAffinity": "ignored",
+      "replicas": [
+        {
+          "address": "10.42.0.20",
+          "backendStoreDriver": "v1",
+          "currentImage": "longhornio/longhorn-engine:v1.5.3",
+          "dataPath": "/var/lib/longhorn/replicas/pvc-6745c810-736f-4027-af07-ac701e919fee-b97dad08",
+          "diskID": "2aae255e-f65b-46c7-9481-8b6e8d42a7ae",
+          "diskPath": "/var/lib/longhorn/",
+          "engineImage": "longhornio/longhorn-engine:v1.5.3",
+          "failedAt": "",
+          "hostId": "rke2",
+          "instanceManagerName": "instance-manager-d6dcb04124ed15b9c5d678559ed339d8",
+          "mode": "RW",
+          "name": "pvc-6745c810-736f-4027-af07-ac701e919fee-r-9cb0fd2b",
+          "running": true
+        }
+      ],
+      "restoreInitiated": false,
+      "restoreRequired": false,
+      "restoreStatus": [
+        {
+          "backupURL": "",
+          "error": "",
+          "filename": "",
+          "isRestoring": false,
+          "lastRestored": "",
+          "progress": 0,
+          "replica": "pvc-6745c810-736f-4027-af07-ac701e919fee-r-9cb0fd2b",
+          "state": ""
+        }
+      ],
+      "restoreVolumeRecurringJob": "ignored",
+      "revisionCounterDisabled": false,
+      "robustness": "healthy",
+      "shareEndpoint": "",
+      "shareState": "",
+      "size": "1073741824",
+      "snapshotDataIntegrity": "ignored",
+      "staleReplicaTimeout": 30,
+      "standby": false,
+      "state": "attached",
+      "unmapMarkSnapChainRemoved": "ignored",
+      "volumeAttachment": {
+        "attachments": {
+          "csi-6137f7ff498580ecb9aa0f79d81dcacaddee86cb22221e922e56e8b6325fb842": {
+            "attachmentID": "csi-6137f7ff498580ecb9aa0f79d81dcacaddee86cb22221e922e56e8b6325fb842",
+            "attachmentType": "csi-attacher",
+            "conditions": [
+              {
+                "lastProbeTime": "",
+                "lastTransitionTime": "2023-11-21T13:51:36Z",
+                "message": "",
+                "reason": "",
+                "status": "true"
+              }
+            ],
+            "nodeID": "rke2",
+            "parameters": {
+              "disableFrontend": "false",
+              "lastAttachedBy": ""
+            },
+            "satisfied": true
+          }
+        },
+        "volume": "pvc-6745c810-736f-4027-af07-ac701e919fee"
+      }
+    },
+    {
+      "accessMode": "rwo",
+      "backendStoreDriver": "v1",
+      "backingImage": "",
+      "backupCompressionMethod": "lz4",
+      "backupStatus": [],
+      "cloneStatus": {
+        "snapshot": "",
+        "sourceVolume": "",
+        "state": ""
+      },
+      "conditions": {
+        "Restore": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T18:25:23Z",
+          "message": "",
+          "reason": "",
+          "status": "false"
+        },
+        "Scheduled": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T18:30:42Z",
+          "message": "",
+          "reason": "",
+          "status": "true"
+        },
+        "TooManySnapshots": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T18:25:23Z",
+          "message": "",
+          "reason": "",
+          "status": "false"
+        },
+        "WaitForBackingImage": {
+          "lastProbeTime": "",
+          "lastTransitionTime": "2023-11-21T18:25:23Z",
+          "message": "",
+          "reason": "",
+          "status": "false"
+        }
+      },
+      "controllers": [
+        {
+          "actualSize": "51015680",
+          "address": "10.42.0.20",
+          "currentImage": "longhornio/longhorn-engine:v1.5.3",
+          "endpoint": "/dev/longhorn/pvc-8a48db20-c774-4407-9302-56b2762cb3bf",
+          "engineImage": "longhornio/longhorn-engine:v1.5.3",
+          "hostId": "rke2",
+          "instanceManagerName": "instance-manager-d6dcb04124ed15b9c5d678559ed339d8",
+          "isExpanding": false,
+          "lastExpansionError": "",
+          "lastExpansionFailedAt": "",
+          "lastRestoredBackup": "",
+          "name": "pvc-8a48db20-c774-4407-9302-56b2762cb3bf-e-0",
+          "requestedBackupRestore": "",
+          "running": true,
+          "size": "1073741824",
+          "unmapMarkSnapChainRemovedEnabled": false
+        }
+      ],
+      "created": "2023-11-21 18:25:23 +0000 UTC",
+      "currentImage": "longhornio/longhorn-engine:v1.5.3",
+      "dataLocality": "disabled",
+      "dataSource": "",
+      "disableFrontend": false,
+      "diskSelector": [],
+      "encrypted": false,
+      "engineImage": "longhornio/longhorn-engine:v1.5.3",
+      "fromBackup": "",
+      "frontend": "blockdev",
+      "kubernetesStatus": {
+        "lastPVCRefAt": "",
+        "lastPodRefAt": "",
+        "namespace": "default",
+        "pvName": "pvc-8a48db20-c774-4407-9302-56b2762cb3bf",
+        "pvStatus": "Bound",
+        "pvcName": "nginx2-data-nginx2-0",
+        "workloadsStatus": [
+          {
+            "podName": "nginx2-0",
+            "podStatus": "Running",
+            "workloadName": "nginx2",
+            "workloadType": "StatefulSet"
+          }
+        ]
+      },
+      "lastAttachedBy": "",
+      "lastBackup": "",
+      "lastBackupAt": "",
+      "migratable": false,
+      "name": "pvc-8a48db20-c774-4407-9302-56b2762cb3bf",
+      "nodeSelector": [],
+      "numberOfReplicas": 1,
+      "offlineReplicaRebuilding": "disabled",
+      "offlineReplicaRebuildingRequired": false,
+      "purgeStatus": [
+        {
+          "error": "",
+          "isPurging": false,
+          "progress": 0,
+          "replica": "pvc-8a48db20-c774-4407-9302-56b2762cb3bf-r-62efd0fd",
+          "state": ""
+        }
+      ],
+      "ready": true,
+      "rebuildStatus": [],
+      "recurringJobSelector": null,
+      "replicaAutoBalance": "ignored",
+      "replicaSoftAntiAffinity": "ignored",
+      "replicaZoneSoftAntiAffinity": "ignored",
+      "replicas": [
+        {
+          "address": "10.42.0.20",
+          "backendStoreDriver": "v1",
+          "currentImage": "longhornio/longhorn-engine:v1.5.3",
+          "dataPath": "/var/lib/longhorn/replicas/pvc-8a48db20-c774-4407-9302-56b2762cb3bf-213ad051",
+          "diskID": "2aae255e-f65b-46c7-9481-8b6e8d42a7ae",
+          "diskPath": "/var/lib/longhorn/",
+          "engineImage": "longhornio/longhorn-engine:v1.5.3",
+          "failedAt": "",
+          "hostId": "rke2",
+          "instanceManagerName": "instance-manager-d6dcb04124ed15b9c5d678559ed339d8",
+          "mode": "RW",
+          "name": "pvc-8a48db20-c774-4407-9302-56b2762cb3bf-r-62efd0fd",
+          "running": true
+        }
+      ],
+      "restoreInitiated": false,
+      "restoreRequired": false,
+      "restoreStatus": [
+        {
+          "backupURL": "",
+          "error": "",
+          "filename": "",
+          "isRestoring": false,
+          "lastRestored": "",
+          "progress": 0,
+          "replica": "pvc-8a48db20-c774-4407-9302-56b2762cb3bf-r-62efd0fd",
+          "state": ""
+        }
+      ],
+      "restoreVolumeRecurringJob": "ignored",
+      "revisionCounterDisabled": false,
+      "robustness": "healthy",
+      "shareEndpoint": "",
+      "shareState": "",
+      "size": "1073741824",
+      "snapshotDataIntegrity": "ignored",
+      "staleReplicaTimeout": 30,
+      "standby": false,
+      "state": "attached",
+      "unmapMarkSnapChainRemoved": "ignored",
+      "volumeAttachment": {
+        "attachments": {
+          "csi-df2595ba8c5a1be1149a304bae22801357c1f544ca035ce146daf53f91f366b7": {
+            "attachmentID": "csi-df2595ba8c5a1be1149a304bae22801357c1f544ca035ce146daf53f91f366b7",
+            "attachmentType": "csi-attacher",
+            "conditions": [
+              {
+                "lastProbeTime": "",
+                "lastTransitionTime": "2023-11-21T18:25:29Z",
+                "message": "",
+                "reason": "",
+                "status": "true"
+              }
+            ],
+            "nodeID": "rke2",
+            "parameters": {
+              "disableFrontend": "false",
+              "lastAttachedBy": ""
+            },
+            "satisfied": true
+          }
+        },
+        "volume": "pvc-8a48db20-c774-4407-9302-56b2762cb3bf"
+      }
+    }
+  ],
+  "resourceType": "volume"
+}
