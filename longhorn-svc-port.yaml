@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  longhorn-svc-nodeport
+  namespace: longhorn-system
+spec:
+  selector:
+    app: longhorn-ui
+  type:  NodePort
+  ports:
+  - name:  http
+    port:  80
+    nodePort: 30404
+    targetPort:  http
