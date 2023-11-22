@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name:  longhorn-svc-nodeport
+  name:  longhorn-frontend-nodeport
   namespace: longhorn-system
 spec:
   selector:
